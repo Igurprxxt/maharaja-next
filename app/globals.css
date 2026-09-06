@@ -1,0 +1,307 @@
+@import "tailwindcss";
+
+:root {
+  --royal-blue: #0a1930;
+  --royal-blue-light: #132743;
+  --gold: #d4af37;
+  --gold-light: #e8cc6a;
+  --cream: #f4f0e8;
+  --cream-dark: #e9e2d2;
+  --ink: #1a1a1a;
+}
+
+@theme inline {
+  --color-royal-blue: var(--royal-blue);
+  --color-royal-blue-light: var(--royal-blue-light);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --font-display: var(--font-cinzel);
+  --font-sans: var(--font-dm-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--royal-blue);
+  font-family: var(--font-dm-sans), sans-serif;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--royal-blue);
+}
+
+/* ---------- Royal gradient ---------- */
+.royal-gradient {
+  background: linear-gradient(160deg, var(--royal-blue) 0%, #081426 55%, #0d2038 100%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(120deg, #b8862f 0%, #ecd07f 35%, #d4af37 60%, #b8862f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Mandala texture: large ornamental medallion, for dark royal-blue sections ---------- */
+.texture-mandala {
+  position: relative;
+  isolation: isolate;
+}
+.texture-mandala::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.055;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='1'%3E%3Ccircle cx='400' cy='400' r='60'/%3E%3Ccircle cx='400' cy='400' r='110'/%3E%3Ccircle cx='400' cy='400' r='170'/%3E%3Ccircle cx='400' cy='400' r='240'/%3E%3Ccircle cx='400' cy='400' r='320'/%3E%3Cg%3E%3Cpath d='M400 130 C 430 190, 430 230, 400 280 C 370 230, 370 190, 400 130 Z'/%3E%3Cpath d='M400 130 C 430 190, 430 230, 400 280 C 370 230, 370 190, 400 130 Z' transform='rotate(30 400 400)'/%3E%3Cpath d='M400 130 C 430 190, 430 230, 400 280 C 370 230, 370 190, 400 130 Z' transform='rotate(60 400 400)'/%3E%3Cpath d='M400 130 C 430 190, 430 230, 400 280 C 370 230, 370 190, 400 130 Z' transform='rotate(90 400 400)'/%3E%3Cpath d='M400 130 C 430 190, 430 230, 400 280 C 370 230, 370 190, 400 130 Z' transform='rotate(120 400 400)'/%3E%3Cpath d='M400 130 C 430 190, 430 230, 400 280 C 370 230, 370 190, 400 130 Z' transform='rotate(150 400 400)'/%3E%3Cpath d='M400 130 C 430 190, 430 230, 400 280 C 370 230, 370 190, 400 130 Z' transform='rotate(180 400 400)'/%3E%3Cpath d='M400 130 C 430 190, 430 230, 400 280 C 370 230, 370 190, 400 130 Z' transform='rotate(210 400 400)'/%3E%3Cpath d='M400 130 C 430 190, 430 230, 400 280 C 370 230, 370 190, 400 130 Z' transform='rotate(240 400 400)'/%3E%3Cpath d='M400 130 C 430 190, 430 230, 400 280 C 370 230, 370 190, 400 130 Z' transform='rotate(270 400 400)'/%3E%3Cpath d='M400 130 C 430 190, 430 230, 400 280 C 370 230, 370 190, 400 130 Z' transform='rotate(300 400 400)'/%3E%3Cpath d='M400 130 C 430 190, 430 230, 400 280 C 370 230, 370 190, 400 130 Z' transform='rotate(330 400 400)'/%3E%3C/g%3E%3Cg%3E%3Ccircle cx='400' cy='80' r='6'/%3E%3Ccircle cx='400' cy='80' r='6' transform='rotate(22.5 400 400)'/%3E%3Ccircle cx='400' cy='80' r='6' transform='rotate(45 400 400)'/%3E%3Ccircle cx='400' cy='80' r='6' transform='rotate(67.5 400 400)'/%3E%3Ccircle cx='400' cy='80' r='6' transform='rotate(90 400 400)'/%3E%3Ccircle cx='400' cy='80' r='6' transform='rotate(112.5 400 400)'/%3E%3Ccircle cx='400' cy='80' r='6' transform='rotate(135 400 400)'/%3E%3Ccircle cx='400' cy='80' r='6' transform='rotate(157.5 400 400)'/%3E%3Ccircle cx='400' cy='80' r='6' transform='rotate(180 400 400)'/%3E%3Ccircle cx='400' cy='80' r='6' transform='rotate(202.5 400 400)'/%3E%3Ccircle cx='400' cy='80' r='6' transform='rotate(225 400 400)'/%3E%3Ccircle cx='400' cy='80' r='6' transform='rotate(247.5 400 400)'/%3E%3Ccircle cx='400' cy='80' r='6' transform='rotate(270 400 400)'/%3E%3Ccircle cx='400' cy='80' r='6' transform='rotate(292.5 400 400)'/%3E%3Ccircle cx='400' cy='80' r='6' transform='rotate(315 400 400)'/%3E%3Ccircle cx='400' cy='80' r='6' transform='rotate(337.5 400 400)'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: min(140vw, 1400px);
+}
+.texture-mandala > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* corner medallion, smaller, for section accents */
+.texture-corner::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  opacity: 0.14;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='1.2'%3E%3Cpath d='M10 10 C 60 10, 90 10, 90 60 C 90 10, 110 10, 190 10' /%3E%3Cpath d='M10 10 C 10 60, 10 90, 60 90 C 10 90, 10 110, 10 190' /%3E%3Ccircle cx='10' cy='10' r='6'/%3E%3Cpath d='M30 30 Q 60 20 70 50 Q 40 55 30 30 Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* ---------- Jaali lattice texture: fine repeating tile for cream sections ---------- */
+.texture-jaali {
+  position: relative;
+  isolation: isolate;
+}
+.texture-jaali::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+  background-image: url("/images/textures/floral-vintage.jpg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 100%;
+}
+.texture-jaali > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Jaali lattice texture (gold-on-dark variant): finer, less dominant than the mandala medallion ---------- */
+.texture-jaali-dark {
+  position: relative;
+  isolation: isolate;
+}
+.texture-jaali-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.6'%3E%3Cpath d='M42 4 L74 42 L42 80 L10 42 Z'/%3E%3Ccircle cx='42' cy='42' r='16'/%3E%3Cpath d='M42 4 V 80 M10 42 H 74'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 84px 84px;
+}
+.texture-jaali-dark > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Paisley brocade texture: repeating mango/booti motif, distinct from the jaali lattice ---------- */
+.texture-paisley {
+  position: relative;
+  isolation: isolate;
+}
+.texture-paisley::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.7'%3E%3Cpath d='M36 14c10 0 15 8 11 17-3 7-11 11-18 8-6-3-8-10-4-15 3-4 9-5 11-1 2 3-1 6-4 5'/%3E%3Ccircle cx='36' cy='50' r='1.4' fill='%23D4AF37' stroke='none'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 72px 72px;
+}
+.texture-paisley > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Paisley divider ---------- */
+.divider-motif {
+  width: 64px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='1.5'%3E%3Cline x1='0' y1='20' x2='40' y2='20'/%3E%3Cline x1='80' y1='20' x2='120' y2='20'/%3E%3Ccircle cx='60' cy='20' r='6'/%3E%3Cpath d='M52 20 L60 12 L68 20 L60 28 Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ---------- Film grain / noise overlay to kill flat white space ---------- */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- Reveal-on-scroll utility (paired with framer-motion but usable standalone) ---------- */
+.underline-grow {
+  position: relative;
+}
+.underline-grow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 1px;
+  width: 0;
+  background: var(--gold);
+  transition: width 0.4s ease;
+}
+.underline-grow:hover::after {
+  width: 100%;
+}
+
+@keyframes ldRise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Gallery: asymmetric masonry (pixel-matched breakpoints) ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 3px;
+  background: rgba(212, 175, 55, 0.03);
+}
+.g-cell {
+  position: relative;
+  overflow: hidden;
+  background: #12233d;
+}
+.g-cell img {
+  object-fit: cover;
+  filter: brightness(0.82) saturate(0.8);
+  transition: filter 0.5s, transform 7s ease;
+}
+.g-cell:hover img {
+  filter: brightness(1) saturate(1);
+  transform: scale(1.04);
+}
+.g-cell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(212, 175, 55, 0.06);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.g-cell:hover::after {
+  opacity: 1;
+}
+.g-cell.hero-cell {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  height: 580px;
+}
+.g-cell.sm1 {
+  grid-column: 2;
+  grid-row: 1;
+  height: 280px;
+}
+.g-cell.sm2 {
+  grid-column: 3;
+  grid-row: 1;
+  height: 280px;
+}
+.g-cell.sm3 {
+  grid-column: 2;
+  grid-row: 2;
+  height: 280px;
+}
+.g-cell.sm4 {
+  grid-column: 3;
+  grid-row: 2;
+  height: 280px;
+}
+.g-cell.wide1 {
+  grid-column: 1 / 3;
+  grid-row: 3;
+  height: 320px;
+}
+.g-cell.wide2 {
+  grid-column: 3;
+  grid-row: 3;
+  height: 320px;
+}
+
+@media (max-width: 960px) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .g-cell.hero-cell {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    height: 300px;
+  }
+  .g-cell.sm1,
+  .g-cell.sm2,
+  .g-cell.sm3,
+  .g-cell.sm4 {
+    grid-column: auto;
+    grid-row: auto;
+    height: 220px;
+  }
+  .g-cell.wide1,
+  .g-cell.wide2 {
+    grid-column: 1 / 3;
+    grid-row: auto;
+    height: 260px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .g-cell {
+    height: 240px !important;
+    grid-column: 1 !important;
+    grid-row: auto !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .texture-mandala::before {
+    background-size: 900px;
+  }
+}
